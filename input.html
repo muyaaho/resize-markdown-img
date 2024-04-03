@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form class="container">
+      <h1>경로와 크기(%)를 입력해주세요.</h1>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+        />
+        <label for="floatingInput">![image]()</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="number"
+          class="form-control"
+          id="floatingSize"
+          placeholder="Password"
+        />
+        <label for="floatingSize">size</label>
+      </div>
+      <button type="button" class="btn btn-primary mt-3" id="url_submit">
+        Submit
+      </button>
+    </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+<script>
+  const btn = document.querySelector("#url_submit");
+  btn.addEventListener("click", function () {
+    const info = {
+      img_url: document.querySelector("#floatingInput").value,
+      img_size: document.querySelector("#floatingSize").value,
+    };
+    console.log(info);
+    const iu = info["img_url"];
+    const size = info["img_size"];
+    console.log(iu.substring(8, iu.length));
+    var result =
+      "<img src=" +
+      iu.substring(9, iu.length - 1) +
+      ' width="' +
+      size +
+      '%" height="' +
+      size +
+      '%"/>';
+    console.log(result);
+
+    document.write("<xmp>" + result + "</xmp>");
+  });
+</script>
