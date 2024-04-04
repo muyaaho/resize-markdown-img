@@ -13,22 +13,21 @@
   </head>
   <body>
     <form class="container">
-      <!-- <h1 class="mt-3">url과 크기(%)를 입력해주세요.</h1> -->
       <div class="form-floating mb-3 mt-4">
         <input
           type="text"
           class="form-control"
           id="floatingInput"
-          placeholder="name@example.com"
+          placeholder="![image]() 형식의 url"
         />
-        <label for="floatingInput">![image]()</label>
+        <label for="floatingInput">url</label>
       </div>
       <div class="form-floating">
         <input
           type="number"
           class="form-control"
           id="floatingSize"
-          placeholder="Password"
+          placeholder="적용할 비율(퍼센트로 적용됩니다. 숫자로 입력해주세요.)"
         />
         <label for="floatingSize">size</label>
       </div>
@@ -56,13 +55,13 @@
     const size = info["img_size"];
     console.log(iu.substring(8, iu.length));
     var result =
-      "<img src=" +
+      "<br><img src=" +
       iu.substring(9, iu.length - 1) +
       ' width="' +
       size +
       '%" height="' +
       size +
-      '%"/>';
+      '%"/><br>';
     console.log(result);
 
     document.write("<xmp>" + result + "</xmp>");
