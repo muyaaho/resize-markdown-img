@@ -63,19 +63,21 @@
       img_url: document.querySelector("#floatingInput").value,
       img_size: document.querySelector("#floatingSize").value,
     };
-    console.log(info);
+
     const iu = info["img_url"];
     const size = info["img_size"];
-    console.log(iu.substring(8, iu.length));
+    const re =
+      /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+    console.log(iu.match(re)[0]);
+
     var result =
       "<img src=" +
-      iu.substring(9, iu.length - 1) +
+      iu.match(re)[0] +
       ' width="' +
       size +
       '%" height="' +
       size +
       '%"/><br>';
-    console.log(result);
 
     document.write("<xmp>" + result + "</xmp>");
   });
