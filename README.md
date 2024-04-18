@@ -24,3 +24,9 @@ url과 조정할 크기를 작성하면 작성된 크기의 이미지 태그를 
    <img src=https://github.com/muyaaho/resize-markdown-img/assets/76798969/6f92fdf6-bb1b-4832-acae-5163b9ad8534 width="80%" height="80%"/>
 
 입력 시 `![image](https://github.com/muyaaho/project-board/assets/76798969/627c42c7-7e29-4f0a-9dcc-6ebb0dd4b1f2)` 같은 형식을 사용합니다.
+
+
+## 🔎 
+- 깃허브 페이지는 static website만 지원해서 뒤로가기 기능을 만들기 위해 post로 값들을 넘기려 했는데 그럴 수 없었습니다.
+- 여러가지 하고 싶은 것들이 많았는데 제약이 있어 프로젝트는 여기서 마감하겠습니다.
+- 뒤로가기에 집착을 많이 했는데 뒤로가기 대신 새로고침을 하면 깃허브 페이지로 넘어가지 않고 url 페이지로 넘어가긴 합니다.
