@@ -19,6 +19,7 @@ url과 조정할 크기를 작성하면 작성된 크기의 이미지 태그를 
 
 입력 시 `![image](https://github.com/muyaaho/project-board/assets/76798969/627c42c7-7e29-4f0a-9dcc-6ebb0dd4b1f2)` 같은 형식을 사용합니다.
 
+
 ## 📒 Memo
 
 - 이미지 태그 위, 아래에 글 작성 시 아래 그림처럼 줄바꿈이 되지 않아 양 끝에 `<br>` 태그를 추가했습니다.
