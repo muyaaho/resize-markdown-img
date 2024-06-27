@@ -1,5 +1,4 @@
 $("textarea#output").on("evt", function (event, inp, ta) {
-  // <!--            $(this).text(toHtml(ta, inp));-->
   $(this).text(allToResize(ta, inp));
 });
 
@@ -23,7 +22,7 @@ function allToResize(text, size) {
   var lines = text.split("\n");
   var result = "";
   for (var i = 0; i < lines.length; i++) {
-    if (lines[i].includes("![image]")) {
+    if (lines[i].includes("![image]") || lines[i].includes("<img src=")) {
       result += toHtml(lines[i], size);
       result += "\n";
       continue;
