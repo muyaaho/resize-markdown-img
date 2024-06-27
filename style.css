@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 header {
   text-align: center;
   padding: 16px;
@@ -10,6 +18,7 @@ main {
   /* padding: 0 80px; */
   width: 600px;
   padding: 15px;
+  font-family: "Pretendard-Regular";
   /* background-color: azure; */
 }
 
@@ -20,6 +29,7 @@ textarea {
   border-radius: 12px;
   resize: vertical;
   padding: 12px;
+  font-family: "Consolas", "Pretendard-Regular";
 }
 
 input {
@@ -27,6 +37,7 @@ input {
   padding: 12px;
   width: 100%;
   border-radius: 12px;
+  font-family: "Consolas";
   /* margin-bottom: 10px; */
 }
 
