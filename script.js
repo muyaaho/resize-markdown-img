@@ -1,5 +1,4 @@
 $("textarea#output").on("evt", function (event, inp, ta) {
-  // <!--            $(this).text(toHtml(ta, inp));-->
   $(this).text(allToResize(ta, inp));
 });
 
