@@ -13,14 +13,9 @@ function toHtml(url, size) {
   const re =
     /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?[^)]/;
 
+  const result = url.match(re) ? url.match(re)[0] : "";
   return (
-    "<img src=" +
-    url.match(re)[0] +
-    ' width="' +
-    size +
-    '%" height="' +
-    size +
-    '%"/><br>'
+    "<img src=" + result + ' width="' + size + '%" height="' + size + '%"/><br>'
   );
 }
 
