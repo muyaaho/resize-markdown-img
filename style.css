@@ -17,28 +17,24 @@ main {
   padding: 15px;
   font-family: "Pretendard-Regular";
 }
-
-textarea {
-  display: block;
-  margin: 10px auto;
+#content_wrapper {
   width: 100%;
-  border-radius: 12px;
-  resize: vertical;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+textarea {
   padding: 12px;
+  display: block;
+  border-radius: 12px;
   font-family: "Consolas", "Pretendard-Regular";
 }
 
 input {
-  display: block;
   padding: 12px;
-  width: 100%;
+  display: block;
   border-radius: 12px;
   font-family: "Consolas";
-}
-
-.button-container {
-  text-align: center;
-  margin: 10px 0 0 0;
 }
 
 button {
