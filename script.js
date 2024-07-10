@@ -23,6 +23,12 @@ function allToResize(text, size) {
   var result = "";
   for (var i = 0; i < lines.length; i++) {
     if (lines[i].includes("![image]") || lines[i].includes("<img src=")) {
+      var space =
+        lines[i].indexOf("![image]") > 0
+          ? lines[i].indexOf("![image]")
+          : lines[i].indexOf("<img src=");
+
+      result += " ".repeat(space);
       result += toHtml(lines[i], size);
       result += "\n";
       continue;
