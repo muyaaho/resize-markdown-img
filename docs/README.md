@@ -23,7 +23,7 @@
 - [ ] 기존 github url을 복사하면 바로 notion에서 확인 가능. 그래서 html tag to notion image url로 바꾸는 기능도 추가하기
 - [x] size의 min, max 추가하기
 - [ ] inputsize가 기본이었다가 더 커지면 최대로 커지게 못바꾸나?
-- [ ] output code 선택하면 전체선택
+- [x] output code 선택하면 전체선택
 - [x] 글씨체 적용
 
 

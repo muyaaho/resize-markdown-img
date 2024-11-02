@@ -14,6 +14,10 @@ sizeContainer.addEventListener('input', (e) => {
     outputConatainer.value = updateCode();
 })
 
+function selectAll(e) {
+    e.select();
+}
+
 function resizeUrl(url, size) {
     const re = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?[^)]/;
 
@@ -43,3 +47,4 @@ function handleOnInput(element, maxlength) {
         element.value = element.value.substr(0, maxlength);
     }
 }
+
