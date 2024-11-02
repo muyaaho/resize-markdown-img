@@ -6,6 +6,7 @@ let inputCode = '';
 
 inputConatainer.addEventListener('input', function(e) {
     inputCode = e.target.value;
+    outputConatainer.value = updateCode();
 })
 
 sizeContainer.addEventListener('input', (e) => {
@@ -35,4 +36,10 @@ function updateCode() {
         result += `${line}\n`
     }
     return result;
+}
+
+function handleOnInput(element, maxlength) {
+    if (element.value.length > maxlength) {
+        element.value = element.value.substr(0, maxlength);
+    }
 }

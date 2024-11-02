@@ -25,18 +25,18 @@
             </div>
             <div class="col-auto">
                 <input placeholder="100" type="number" id="inputSize" class="form-control"
-                    aria-describedby="numHelpInline">
+                    aria-describedby="numHelpInline" oninput="handleOnInput(this, 4)">
             </div>
             <div class="col-auto">
                 <span id="numHelpInline" class="form-text">
-                    숫자로 입력해 주세요.
+                    %로 적용됩니다.
                 </span>
             </div>
         </div>
 
 
         <div class="mb-3 mt-5 form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="outputCode" style="height: 200px"
+            <textarea class="form-control" placeholder="Leave a comment here" id="outputCode" style="height: 500px"
                 readonly></textarea>
             <label for="outputCode">Output</label>
         </div>
