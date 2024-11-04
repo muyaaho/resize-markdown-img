@@ -18,11 +18,9 @@ function selectAll(e) {
     e.select();
 }
 
-function resizeUrl(url, size) {
-    const re = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?[^)]/;
-
-    const result = url.match(re) ? url.match(re)[0] : "";
-    return `<img src=${result} width=${size}% height=${size}%/><br>`
+function resizeUrl2 (url, size) {
+    const regex = /https?:\/\/[^\s"')]+/g;
+    return `<img src=${url.match(regex)} width=${size}% height=${size}%/><br>`
 }
 
 function updateCode() {
@@ -30,11 +28,11 @@ function updateCode() {
     let result = '';
 
     for (let line of lines) {
-        if (line.includes("![image]") || lines.includes("<img src=")) {
+        if (line.includes("![image]") || line.includes("<img src=")) {
             let prefix = line.includes("![image]") ? "![image]" : "<img src=";
             const space = line.indexOf(prefix);
 
-            result += `${' '.repeat(space)}${resizeUrl(line,size)}\n`
+            result += `${' '.repeat(space)}${resizeUrl2(line,size)}\n`
             continue;
         }
         result += `${line}\n`
